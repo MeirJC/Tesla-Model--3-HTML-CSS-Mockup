@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+}
+body {
+  background: #fff;
+}
+.svg_logo {
+  margin-left: 48px;
+  max-width: 120px;
+  min-height: 54px;
+}
