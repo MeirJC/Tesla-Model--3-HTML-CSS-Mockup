@@ -35,6 +35,7 @@ body {
 /* -----       1st Page       ----- */
 /* -------------------------------- */
 .page-1 {
+  position: relative;
   height: 100vh;
   background: url(./images/Model-3-Page\ 1\ backgroung.jfif) no-repeat center center/cover;
 }
@@ -79,8 +80,8 @@ li a:visited {
   font-weight: 400;
 }
 
-li a:hover {
-  background-color: #2B2E34;
+li:nth-child(n+2):hover {
+  background-color: #2b2e34aa;
   border-radius: 5px;
 }
 
@@ -104,4 +105,59 @@ li:nth-child(8) {
   font-weight: 500;
   letter-spacing: -0.6px;
   outline: 2px;
+}
+
+/* Aside Nav */
+
+/* Bottom Specs */
+.bottom-specs {
+  height: 54px;
+  position: relative;
+  top: 62vh;
+  left: 0;
+  /* border: 2px solid white; */
+  display: flex;
+  justify-content: center;
+}
+
+.spec {
+  /* border: 2px solid orange; */
+  height: 54px;
+  width: 110px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 12px;
+  display: flex;
+}
+
+.speedometer {
+  /* margin: 50px solid yellow; */
+  position: relative;
+}
+
+.speedometer-outer-circle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 21px;
+}
+
+.speedometer-inner-circle {
+  position: absolute;
+  left: 2.45px;
+  top: 2.6px;
+  width: 30px;
+  height: 15px;
+  opacity: 0.7;
+}
+
+.speedometer-needle {
+  position: absolute;
+  left: 24px;
+  top: 12px;
+  width: 4px;
+  height: 16px;
+  rotate: 90deg;
 }
