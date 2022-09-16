@@ -110,35 +110,48 @@ li:nth-child(8) {
 /* Aside Nav */
 
 /* Bottom Specs */
-.bottom-specs {
+.specs-bar {
+  margin-top: 2px;
+  margin-left: 4px;
   height: 54px;
   position: relative;
-  top: 62vh;
+  top: 64vh;
   left: 0;
   /* border: 2px solid white; */
   display: flex;
   justify-content: center;
 }
 
-.spec {
+.spec-whole {
   /* border: 2px solid orange; */
   height: 54px;
-  width: 110px;
+  width: 120px;
   text-align: center;
   font-size: 14px;
   line-height: 20px;
-  margin: 0 12px;
+  margin: 0 30px 0;
   display: flex;
+  flex-direction: column;
+}
+
+.top-half {
+  width: 100%;
+  height: 50%;
+}
+
+.bottom-half {
+  width: 100%;
+  height: 50%;
 }
 
 .speedometer {
-  /* margin: 50px solid yellow; */
   position: relative;
+  display: block;
 }
 
 .speedometer-outer-circle {
   position: absolute;
-  left: 0;
+  left: 8px;
   top: 0;
   width: 40px;
   height: 21px;
@@ -146,18 +159,75 @@ li:nth-child(8) {
 
 .speedometer-inner-circle {
   position: absolute;
-  left: 2.45px;
+  left: 6.5px;
   top: 2.6px;
   width: 30px;
   height: 15px;
-  opacity: 0.7;
+  opacity: 0.45;
 }
 
 .speedometer-needle {
   position: absolute;
-  left: 24px;
+  left: 32px;
   top: 12px;
   width: 4px;
   height: 16px;
   rotate: 90deg;
+}
+
+
+/* specs text */
+.top-half h3 {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0 0 0 40px;
+}
+
+.small-speed-txt {
+  font-size: 24px;
+}
+
+.bottom-half h4 {
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.spec2 .top-half h3 {
+  margin-left: 0;
+}
+
+.spec3 .top-half h3 {
+  margin-left: 0px;
+}
+
+h4 {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/* order now button */
+.spec4 {
+  border: 3px solid white;
+  width: 196px;
+  height: 34px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spec4 a {
+  display: block;
+  width: 102%;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  text-decoration: none;
+  color: white;
+}
+
+.spec4 a:hover {
+  color: #171a20;
+  background-color: white;
 }
