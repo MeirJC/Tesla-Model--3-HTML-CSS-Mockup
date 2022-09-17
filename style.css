@@ -313,6 +313,34 @@ span.light-header {
   justify-content: space-between;
 }
 
+.page-2-link-1 {
+  width: 150px;
+  display: flex;
+}
+
+#p2ll {
+  width: 40px;
+  height: 40px;
+  background: url(./images/plus-before.png) no-repeat center center/contain;
+}
+
+.page-2-link-1:hover #p2ll {
+  background: url(./images/plus-after.png) no-repeat center center/contain;
+}
+
+#p2lr {
+  width: 100px;
+  height: 40px;
+}
+
+#p2lr a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #171a20;
+  display: block;
+  text-align: center;
+  padding-top: 9px;
+}
 
 .page-2-link-2 {
   color: #171a20;
