@@ -26,13 +26,15 @@
 
 /* General Site */
 body {
-  font-family: gotham-med;
+  font-family: gotham-med,sans-serif;
   box-sizing: border-box;
   color: white;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  scrollbar-width: none;
   overflow-y: scroll;
+}
+a{
+  text-decoration: none;
 }
 
 body::-webkit-scrollbar {
@@ -51,6 +53,8 @@ body::-webkit-scrollbar {
 /* Nav Bar */
 nav {
   height: 56px;
+  position: sticky;
+  top: 0;
 }
 
 .svg_logo {
@@ -80,7 +84,6 @@ li a,
 li a:visited {
   font-size: 14px;
   padding: 4px 8px;
-  padding: auto;
   display: block;
   list-style-type: none;
   text-decoration: none;
@@ -88,9 +91,14 @@ li a:visited {
   font-weight: 400;
 }
 
+/* li:nth-child(n+2) {
+  transition: 0.4s ease-in;
+} */
+
 li:nth-child(n+2):hover {
   background-color: #2b2e34aa;
   border-radius: 5px;
+  transition: 0.4s ease-in;
 }
 
 li:nth-child(1) {
@@ -206,7 +214,7 @@ li:nth-child(8) {
 }
 
 .spec3 .top-half h3 {
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 h4 {
@@ -233,11 +241,27 @@ h4 {
   padding-bottom: 9px;
   text-decoration: none;
   color: white;
+  transition: 0.4s ease-in;
 }
 
 .spec4 a:hover {
   color: #171a20;
   background-color: white;
+  transition: 0.4s ease-in;
+}
+
+.nav-down-link {
+  color: white;
+  text-decoration: none;
+  font-size: 50px;
+  padding: 10px;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 50vw;
+  rotate: 180deg;
+  animation: nav-move-down 2s infinite;
 }
 
 /* -------------------------------- */
@@ -292,8 +316,7 @@ span.light-header {
 
 .page-2-right p {
   padding-left: 0;
-  margin-left: 0;
-  font-family: gotham-book;
+  font-family: gotham-book,sans-serif;
   margin: 12px auto 0;
   font-size: 14px;
   line-height: 1.2rem;
@@ -301,7 +324,7 @@ span.light-header {
 }
 
 .page-2-right p:first-child {
-  padding-top: 0px;
+  padding-top: 0;
   margin-top: 0;
 }
 
@@ -322,10 +345,12 @@ span.light-header {
   width: 40px;
   height: 40px;
   background: url(./images/plus-before.png) no-repeat center center/contain;
+  transition: 0.4s ease-in;
 }
 
 .page-2-link-1:hover #p2ll {
   background: url(./images/plus-after.png) no-repeat center center/contain;
+  transition: 0.4s ease-in;
 }
 
 #p2lr {
@@ -354,12 +379,13 @@ span.light-header {
 .page-2-link-2 a {
   color: #171a20;
   width: 202px;
-  height: 24px;
+  height: 28px;
   padding-top: 9px;
-  padding-bottom: 9px;
+  padding-bottom: 10px;
   position: relative;
   left: -30px;
-  top: 0px;
+  top: 0;
+  transition: 0.4s ease-in;
 }
 
 .page-2-link-2 .spec-whole {
@@ -374,11 +400,75 @@ span.light-header {
 .page-2-link-2 a:hover {
   color: white;
   background-color: #171a20;
+  transition: 0.4s ease-in;
 }
 
+/* Page 2 left side */
+#pin-item1 {
+  border-left: 3px solid #171a20;
+  height: 15.3vh;
+  width: 38.5vw;
+  position: absolute;
+  top: 16vh;
+  left: auto;
+  right: 0;
+}
 
+#pin-item2 {
+  border-left: 3px solid #171a20c5;
+  height: 22vh;
+  width: 52vw;
+  position: absolute;
+  top: 29vh;
+  left: auto;
+  right: 0;
+}
 
+#pin-item3 {
+  border-left: 3px solid #171a20;
+  height: 15.3vh;
+  width: 36vw;
+  position: absolute;
+  top: 59vh;
+  left: auto;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+}
 
+p.detail-txt {
+  color: #171a20;
+  margin: 0 7px;
+}
+
+#nav-up-link {
+  color: #171a20;
+  text-decoration: none;
+  font-size: 50px;
+  padding: 10px;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  bottom: auto;
+  top: 10px;
+  left: 50vw;
+  rotate: 0deg;
+  animation: nav-move-up 2s infinite;
+}
+
+.page-2 .nav-down-link {
+  color: #171a20;
+  text-decoration: none;
+  font-size: 50px;
+  padding: 10px;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 50vw;
+  rotate: 180deg;
+  animation: nav-move-down 2s infinite;
+}
 
 /* -------------------------------- */
 /* -----       3rd Page       ----- */
@@ -391,7 +481,10 @@ span.light-header {
   background: url(./images/page-3.jfif) no-repeat center center/cover;
 }
 
-
+.page-3-down {
+  position: relative;
+  height: 24vh;
+}
 
 /* -------------------------------- */
 /* -----       4th Page       ----- */
@@ -402,4 +495,40 @@ span.light-header {
   position: relative;
   height: 70vh;
   background: url(./images/page-4.jfif) no-repeat center center/cover;
+}
+
+.page-4-down {
+  position: relative;
+  height: 30vh;
+}
+
+/* -------------------------------- */
+/* -----      Animations      ----- */
+/* -------------------------------- */
+@keyframes nav-move-down {
+  25% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: 5px;
+  }
+
+  75% {
+    bottom: 0;
+  }
+}
+
+@keyframes nav-move-up {
+  25% {
+    top: 5px;
+  }
+
+  50% {
+    top: 0;
+  }
+
+  75% {
+    top: 5px;
+  }
 }
