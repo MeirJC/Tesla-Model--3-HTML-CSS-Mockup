@@ -247,24 +247,27 @@ h4 {
 .page-2 {
   display: flex;
   position: relative;
-  height: 98vh;
+  height: 100vh;
+  top: 0;
 }
 
 .page-2-left {
-  width: 78vw;
+  width: 77vw;
   position: relative;
   background: url(./images/page-2.jfif) no-repeat center center/contain;
 }
 
 .page-2-right {
+  box-sizing: border-box;
   color: #171a20;
-  padding: 42px 40px;
-  width: 20vw;
-  height: 900px;
+  padding: 42px 28px 20px 10px;
+  width: 23vw;
+  height: 98vh;
   display: flex;
   flex-direction: column;
   position: relative;
-
+  /* border: 2px solid red; */
+  justify-content: space-between;
 }
 
 span.light-header {
@@ -302,9 +305,48 @@ span.light-header {
   margin-top: 0;
 }
 
+.page-2-right-bottom {
+  /* border: 1px solid blue; */
+  width: 100%;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
 
 
+.page-2-link-2 {
+  color: #171a20;
+  border: 3px solid #171a20;
+  width: 196px;
+  height: 34px;
+  border-radius: 4px;
+  overflow: hidden;
+}
 
+.page-2-link-2 a {
+  color: #171a20;
+  width: 202px;
+  height: 24px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  position: relative;
+  left: -30px;
+  top: 0px;
+}
+
+.page-2-link-2 .spec-whole {
+  border: none;
+}
+
+.page-2-link-2 .spec-whole a:hover {
+  color: white;
+}
+
+.page-2-link-2:hover,
+.page-2-link-2 a:hover {
+  color: white;
+  background-color: #171a20;
+}
 
 
 
